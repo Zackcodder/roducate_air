@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:roducate_air/screens/home.dart';
+import 'package:roducate_air/screens/search_flight.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const SearchFlightPage(),
     );
   }
 }
