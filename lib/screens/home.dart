@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:roducate_air/screens/search_flight.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -124,9 +125,14 @@ class HomePage extends StatelessWidget {
                               SizedBox(
                                 child: Column(
                                   children: [
-                                    CircleAvatar(
-                                    child: Image.asset('assets/images/planeicon.png', height: 20, width: 20,),
-                                    backgroundColor: const Color(0xff1C6AE4), radius: 20,),
+                                    GestureDetector(
+                                      onTap: (){
+                                        Navigator.push(context, MaterialPageRoute(builder: (context) => const SearchFlightPage()));
+                                      },
+                                      child: CircleAvatar(
+                                      backgroundColor: const Color(0xff1C6AE4), radius: 20,
+                                      child: Image.asset('assets/images/planeicon.png', height: 20, width: 20,),),
+                                    ),
                                     const Text("Flight",style:TextStyle(color: Color(0xff141511),
                                         fontSize: 14, fontStyle: FontStyle.normal,
                                         fontFamily: 'General Sans', fontWeight: FontWeight.w400),)
